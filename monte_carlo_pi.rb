@@ -12,7 +12,7 @@ class MonteCarloPi
 
   private
   def generate_random_coordinates
-    Coordinates.new(Random.rand(@@radius), Random.rand(@@radius))
+    Coordinates.generate_within(@@radius)
   end
 
   def calculate_pi
@@ -31,5 +31,6 @@ class MonteCarloPi
     calculate_pi
     yield(@pi, @darts_total, @darts_in_circle)
   end
+
 end
 

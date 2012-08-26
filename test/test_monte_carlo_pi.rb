@@ -1,13 +1,14 @@
 require 'minitest/reporters'
 require 'minitest/autorun'
-require 'matrix'
-require_relative "monte_carlo_pi"
+require_relative "../monte_carlo_pi"
 
 MiniTest::Reporters.use!
 
 class TestMonteCarloPi < MiniTest::Unit::TestCase
 
   def setup
+    # make private methods accessible for tests
+    MonteCarloPi.send(:public, *MonteCarloPi.private_instance_methods)
     @mc_pi = MonteCarloPi.new
     @coords = @mc_pi.generate_random_coordinates
   end
@@ -22,16 +23,11 @@ class TestMonteCarloPi < MiniTest::Unit::TestCase
   end
 
   def test_random_coordinates
-    assert_kind_of(Vector, @coords, "Coordinates should be an instance of Vector")
-  end
-
-  def test_random_coordinates_size
-    @coords = @mc_pi.generate_random_coordinates
-    assert_equal(2, @coords.size)
+    assert_kind_of(Coordinates, @coords, "Coordinates should be an instance of Coordinates")
   end
 
   def test_random_coordinates_range
-    assert_includes 0.0..1.0, @coords[0]
-    assert_includes 0.0..1.0, @coords[1]
+    assert_includes 0.0..1.0, @coords.x
+    assert_includes 0.0..1.0, @coords.y
   end
 end
