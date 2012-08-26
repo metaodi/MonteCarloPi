@@ -20,7 +20,7 @@ class TestCoordinates < MiniTest::Unit::TestCase
     assert_kind_of(Coordinates, @coords1, "Coordinates should be an instance of Coordinates")
   end
 
-  def test_generate_within_same_param
+  def test_generate_within_with_same_param
     coords = Coordinates.generate_within(5);
     assert_includes 0..5, coords.x
     assert_includes 0..5, coords.y
