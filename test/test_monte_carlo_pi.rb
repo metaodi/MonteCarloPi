@@ -24,7 +24,7 @@ class TestMonteCarloPi < MiniTest::Unit::TestCase
   end
 
   def test_random_coordinates
-    assert_kind_of(Coordinates, @coords, "Coordinates should be an instance of Coordinates")
+    assert_kind_of(Coordinates, @coords, "Object should be an instance of Coordinates")
   end
 
   def test_random_coordinates_range
