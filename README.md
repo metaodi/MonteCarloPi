@@ -7,7 +7,8 @@ This program is using [the darts on circle/square idea](http://www.chem.unl.edu/
 # Build
 
 This projects is build using the Travis CI service.
-[![Build Status](https://secure.travis-ci.org/metaodi/MonteCarloPi.png)](http://travis-ci.org/metaodi/MonteCarloPi)
+
+[![Build Status](https://secure.travis-ci.org/odi86/MonteCarloPi.png)](http://travis-ci.org/odi86/MonteCarloPi)
 
 # License
 
