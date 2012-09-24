@@ -4,6 +4,11 @@ This is a simple implementation to approximate the number Pi using a so called M
 
 This program is using [the darts on circle/square idea](http://www.chem.unl.edu/zeng/joy/mclab/mcintro.html) as an example of Monte Carlo. 
 
+# Build
+
+This projects is build using the Travis CI service.
+[![Build Status](https://secure.travis-ci.org/metaodi/MonteCarloPi.png)](http://travis-ci.org/metaodi/MonteCarloPi)
+
 # License
 
 (The MIT License)
